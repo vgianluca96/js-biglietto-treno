@@ -18,10 +18,16 @@ console.log('Il prezzo base è ', String(price), 'euro');
 // Applicazione sconti
 if (age < 18) {
     price = price * 0.8;
+    // Arrontondamento a due cifre decimali
+    price = Math.round(price*100)/100;
     console.log('Il prezzo con sconto minorenni è ', String(price), 'euro');
 } else if (age > 65) {
     price = price * 0.6;
+    // Arrontondamento a due cifre decimali
+    price = Math.round(price*100)/100;
     console.log('Il prezzo con sconto over 65 è ', String(price), 'euro');
 } else {
-    console.log("Non sono previsti sconti per questa fascia d'età");
+    // Arrontondamento a due cifre decimali
+    price = Math.round(price*100)/100;
+    console.log('Il prezzo è ', String(price),"euro, non sono previsti sconti per questa fascia d'età");
 }
